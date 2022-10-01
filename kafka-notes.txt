@@ -1,0 +1,50 @@
+kafka
+  created at linkedin and opened source in 2011
+  Jay krebbs created it in linkedin. Now CEO of confluent
+
+  Kafka is 2 things
+    server software - broker
+    client api - java librar
+      producer api
+      consumer api
+
+  Kafka connect
+    source connector - pulls data from source system and sends to broker
+    sink connector - pulls data and sends to external system 
+
+    create a kafka connector - impl two java classes
+      SourceConnector() and SinkConnector()
+      SourceTask() and SinkTask()
+
+    architecture - fault tolerant and self-managed
+      reliability, high availability, scalability, and load balancing
+
+      worker
+      connector
+      class
+  kafka broker
+  kafka client
+  kafka streams
+  ksql
+
+highly scalable and distributed platform for creating and processing streams in real-time.
+
+pub sub enterprise system architecture
+  producer - client app that sends data records
+  broker - recieves message from broker and stores in local storage
+  consumer - client apps that reads messages from the broker and processes them
+
+Kafka Core concepts 
+  producer - needs producer application
+    just a series of bytes
+  consumer - application that recieves the data
+    applications need permission to read the data
+    request and recieve messages
+  consumer groups - multiple consumers can share a message and handle the workload
+  broker - just a kafka server
+  cluster - group of computers acting together
+  topic - unique name for a data streams (think of database table)
+  partitions - breaks topics into different brokers within a cluster
+    tool for scalability
+  partition offset - unique seq id of a message. (immutable)
+    topic name -> partition number -> offset number
