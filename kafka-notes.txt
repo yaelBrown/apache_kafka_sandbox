@@ -1,4 +1,4 @@
-kafka
+kafka - Messaging Broker
   created at linkedin and opened source in 2011
   Jay krebbs created it in linkedin. Now CEO of confluent
 
@@ -22,10 +22,35 @@ kafka
       worker
       connector
       class
-  kafka broker
+  kafka broker (core)
   kafka client
   kafka streams
+    is a library in java/scala for building applications or microservices
+    Input data must be in kafka topic
+
+    Data steams unbounded, infinite and ever growing, sequence of data in small packaets (kb)
+
+    collect and store in a storage system
+      database
+      create one big job to database
+        batch processing happens every one or two days. ( on a schedule )
+      
+      Stream processing is a continual process
   ksql
+    sql interface to the kafka streams
+      most things you do in streams are available to you with ksql'
+    
+    runs in 2 modes 
+      cli mode - good for development
+      headless
+
+    Works in cluster
+
+    grouping and aggregating on your kafka topics
+    grouping and aggregating over a time window
+    apply filters
+    joins two topics
+    sink the result of your query into another topic
 
 highly scalable and distributed platform for creating and processing streams in real-time.
 
@@ -48,3 +73,16 @@ Kafka Core concepts
     tool for scalability
   partition offset - unique seq id of a message. (immutable)
     topic name -> partition number -> offset number
+
+
+Run Kafka Locally
+  Apache Zookeeper - Datbase
+
+  Kafka Producer/Consumer
+
+  Brokers have configuration files
+    server.properties - highly configurable
+
+  Kafka Storage Architecture
+  Kafka Cluster Architecture
+  Work Distribution Architecture
