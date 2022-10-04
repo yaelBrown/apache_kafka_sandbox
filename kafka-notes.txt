@@ -83,6 +83,7 @@ Run Kafka Locally
   Brokers have configuration files
     server.properties - highly configurable
 
+Kafka Storage Architecture
   Kafka Storage Architecture
   Kafka Cluster Architecture
   Work Distribution Architecture
