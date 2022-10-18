@@ -118,3 +118,8 @@ Kafka Producer API
   send messages
   close producer
     if you dont close producer you will leak system resources
+
+  uses buffer
+    asynchronous
+    network optimization
+    default producer memory is 32mb
