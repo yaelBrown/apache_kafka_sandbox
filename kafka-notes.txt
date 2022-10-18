@@ -87,3 +87,34 @@ Kafka Storage Architecture
   Kafka Storage Architecture
   Kafka Cluster Architecture
   Work Distribution Architecture
+
+  leader partitions
+  follower partitions
+
+Kafka Cluster
+  Kafka is a masterless cluster. It is managed by Zookeeper
+
+  Master broker - knows about all the brokers
+
+  Zookeeper - manages nodes. 
+    broker/ids/ - list of brokers in the cluster
+
+  Single node is a broker and Zookeeper
+    There is only one controller in the cluster
+
+  Followers request messages from the leader
+    ISR list (In Sync Replica)
+      Not to far - <10
+
+      commited vs uncommited messages
+        commited - when messages are safely copied to the ISR
+        uncommited - not safely copied to the isr. 
+
+Kafka Producer API
+  primary in java
+
+  set config
+  create producer
+  send messages
+  close producer
+    if you dont close producer you will leak system resources
