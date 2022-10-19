@@ -123,3 +123,19 @@ Kafka Producer API
     asynchronous
     network optimization
     default producer memory is 32mb
+
+Types and Serializing
+  Creating data records in variety of formats
+    Create POJOs and serialize POJOs
+    json schema to POJO
+      jsonSchemaToPOJO
+    avro schema to POJO (Apache AVRO)
+      used in big data
+      does not support inheritance
+      .avsc - file format
+
+Kafka Consumer
+  Consumer API
+  Streams API - (complex)
+    Apache Spark 
+  ksql - (complex)
